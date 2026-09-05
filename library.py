@@ -24,32 +24,6 @@ class Library:
             print(book)
         print("---------------------------\n")
 
-    def borrow_book(self, title):
-        for book in self.books:
-            if book.title == title:
-                if not book.is_borrowed:
-                    book.is_borrowed = True
-                    print(f"You have successfully borrowed '{title}'.")
-                    return True
-                else:
-                    print(f"Sorry, '{title}' is already borrowed.")
-                    return False
-
-        print(f"Book '{title}' not found in {self.name}.")
-        return False
 
 
-if __name__ == "__main__":
-    my_library = Library("City Central Library")
-
-    book1 = Book("1984", "George Orwell")
-    book2 = Book("To Kill a Mockingbird", "Harper Lee")
-
-    my_library.add_book(book1)
-    my_library.add_book(book2)
-
-    my_library.list_books()
-
-    # Test borrowing a book
-    my_library.borrow_book("1984")
-    my_library.list_books()
+   
