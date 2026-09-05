@@ -38,7 +38,6 @@ class Library:
         print(f"Book '{title}' not found in {self.name}.")
         return False
 
-
 if __name__ == "__main__":
     my_library = Library("City Central Library")
 
